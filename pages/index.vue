@@ -97,10 +97,7 @@ export default {
 .days,
 .week-days {
   display: grid;
-  /* grid-auto-flow: row dense; */
   grid-template-columns: repeat(7, 50px);
-  /* grid-template-columns: repeat(7, minmax(50px, 1fr)); */
-  /* max-width: 300px; */
   grid-column: 7;
 }
 </style>

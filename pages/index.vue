@@ -42,16 +42,12 @@ import {
   getDay,
   isToday,
 } from 'date-fns'
-import fr from 'date-fns/locale/fr'
 
 export default {
   data() {
     return {
       currentMonth: startOfMonth(new Date()),
-      firstDayOfWeek: startOfWeek(new Date(), {
-        locale: fr,
-        weekStartsOn: 1, // monday
-      }),
+      firstDayOfWeek: startOfWeek(new Date()),
     }
   },
   computed: {
@@ -73,7 +69,7 @@ export default {
       )
     },
     weekdayOffset() {
-      return (getDay(this.currentMonth) + 7) % 7 || 7 // `|| 7` is basically for sunday, edge case
+      return (getDay(this.currentMonth) + 8) % 7 || 7 // `|| 7` is basically for sunday, edge case
     },
   },
   methods: {
